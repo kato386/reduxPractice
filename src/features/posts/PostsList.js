@@ -3,6 +3,7 @@ import { selectAllPosts } from "./postsSlice";
 import React from "react";
 import PostAuthor from "./PostAuthor";
 import TimeAgo from "./TimeAgo";
+import ReactionButtons from "./ReactionButtons";
 const PostsList = () => {
   const posts = useSelector((state) => state.posts);
   const orderedPosts = posts
@@ -16,6 +17,7 @@ const PostsList = () => {
         <PostAuthor userId={post.userId}></PostAuthor>
         <TimeAgo timestamp={post.date}></TimeAgo>
       </p>
+      <ReactionButtons post={post} />
     </article>
   ));
   return (
