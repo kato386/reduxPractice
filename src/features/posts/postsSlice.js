@@ -17,6 +17,13 @@ const initialState = [
     userId: "1",
     date: sub(new Date(), { minutes: 5 }).toISOString(),
   },
+  {
+    id: "3",
+    title: "Learning 12312321",
+    content: "redux123213213s",
+    userId: "2",
+    date: sub(new Date(), { minutes: 7 }).toISOString(),
+  },
 ];
 
 const postsSlice = createSlice({
